@@ -28,12 +28,12 @@ ggplot(data = propina, aes(x= total, y= propina, colour= sexo )) + geom_point() 
 #permite guardar el grafico generado
 ggsave(filename = "E:/FLISOL2019/graficoXgenero.png", width = 16, height = 9)        
 # ---------------------------------------------------------------------------------------------------------------- 
-# 3   - grafico utilizando elemento estético por color y geom__point con color geom_point(colour="blue")
+# 3   - grafico utilizando elemento estético por color y geom__point(colour="blue")
 # ---------------------------------------------------------------------------------------------------------------- 
 ggplot(data = propina, aes(x= total, y= propina, colour= sexo )) + geom_point(colour="blue") + theme(aspect.ratio=1) 
 ggsave(filename = "E:/FLISOL2019/graficoPunoAzul.png", width = 16, height = 9)        
 # ---------------------------------------------------------------------------------------------------------------- 
-#   4-  grafico utilizando como elemento estético  shape (shape for sexo:femenino/masculino)
+#   4-  grafico utilizando como elemento estético shape (shape for sexo:femenino/masculino)
 # ---------------------------------------------------------------------------------------------------------------- 
 ggplot(data = propina, aes(x= total, y= propina, shape= sexo )) + geom_point() + theme(aspect.ratio=1)
 
@@ -52,7 +52,7 @@ ggplot(data = propina, aes(x= total, y= propina, colour= fuma )) + geom_point() 
 # ---------------------------------------------------------------------------------------------------------------- 
 ggplot() + layer(data = propina, mapping =aes(x= total, y= propina), geom = "point", stat="identity", position= "identity")
 # ---------------------------------------------------------------------------------------------------------------- 
-   # 8- Agrego etiquetas al eje 'x' e 'y' y al la leyenda)
+   # 8- Agrego etiquetas al eje 'x' e 'y' y a la leyenda)
 # ---------------------------------------------------------------------------------------------------------------- 
 ggplot(data = propina, aes(x = total, y = propina, color = sexo)) +
   geom_point() +  theme(aspect.ratio = 1) +
@@ -66,7 +66,7 @@ pl + labs(x = "Total de la cuenta", y = "Propina", color = "Sexo", title= "Relac
 pl
 ggpplot3(pl)
 # ---------------------------------------------------------------------------------------------------------------- 
-#  10- gr?fico interactivo con PLOTLY  
+#  10- gráfico interactivo con PLOTLY  
 # ---------------------------------------------------------------------------------------------------------------- 
 
 
@@ -85,7 +85,7 @@ p
 
 
 # ---------------------------------------------------------------------------------------------------------------- 
-#  11- gr?fico interactivo con PLOTLY  
+#  11- gráfico interactivo con PLOTLY  
 # ---------------------------------------------------------------------------------------------------------------- 
 
 pl <- ggplot(propina, aes(total, propina, colour = sexo,text = paste('Sexo:', sexo))) +
